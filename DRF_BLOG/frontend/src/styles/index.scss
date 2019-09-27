@@ -1,0 +1,22 @@
+
+// 도현체를 사용하기 위해서 도현체를 import시키고, 
+// 전체적인 body태그의 스타일링
+// a 태그로 링크 스타일링
+@import url("//fonts.googleapis.com/css?family=Do+Hyeon:400");
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Do Hyeon", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}

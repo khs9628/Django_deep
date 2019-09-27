@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>회원가입</title>{% endblock %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static '/css/user.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+{% include 'user/partials/social_login_panel.html' with panel_name='소셜 회원가입' %}
+<div class="panel panel-default registration">
+    <div class="panel-heading">
+        회원가입하기
+    </div>
+    <div class="panel-body">
+        <form action="." method="post">
+            {% csrf_token %}
+            {% include 'user/partials/form_field.html' with form=form %}
+            <div class="form-actions">
+                <button class="btn btn-primary btn-large" type="submit">회원가입하기</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
